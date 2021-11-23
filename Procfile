@@ -1,2 +1,1 @@
-web:gunicorn backend.wsgi:application
-heroku ps:scale web=1
+web:gunicorn backend.wsgi --log-file -
