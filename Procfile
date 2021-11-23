@@ -1,2 +1,2 @@
 web gunicorn backend.wsgi:application
-python manage.py runserver -a quest-for-the-belt
+web: python manage.py runserver 127.0.0.1:8000
