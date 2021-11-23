@@ -38,7 +38,6 @@ const LeagueDisplay = () => {
       result.data.forEach((team) => {
         playersTemp = playersTemp.concat(team.players);
       });
-      console.log('players: ', playersTemp);
       setLeaguePlayers(playersTemp);
       setLeagueTeams(result.data);
     };
@@ -151,8 +150,8 @@ const LeagueDisplay = () => {
     const currentBoardPlayers = [...sourceBoardPlayers];
     currentBoardPlayers.splice(e.source.index, 1);
     setSourcePlayers(currentBoardPlayers);
-    setNewHomeAverage(getTeamAverage(selectedHomeTeam));
-    setNewAwayAverage(getTeamAverage(selectedAwayTeam));
+    if (selectedHomeTeam) setNewHomeAverage(getTeamAverage(selectedHomeTeam));
+    if (selectedAwayTeam) setNewAwayAverage(getTeamAverage(selectedAwayTeam));
   };
 
   // creates the new average for the players that have moved around on the list
@@ -212,8 +211,8 @@ const LeagueDisplay = () => {
         (player) => player.playerId !== playerInfo.playerId
       );
       setSelectedHomeTeam(homeTeamPlayersTemp);
-      setNewHomeAverage(getTeamAverage(selectedHomeTeam));
-      setNewAwayAverage(getTeamAverage(selectedAwayTeam));
+      if (selectedHomeTeam) setNewHomeAverage(getTeamAverage(selectedHomeTeam));
+      if (selectedAwayTeam) setNewAwayAverage(getTeamAverage(selectedAwayTeam));
     } else if (e.source.droppableId === 'players2') {
       // removes the player from the away team
       const awayTeamPlayersTemp = selectedAwayTeam;
@@ -221,8 +220,8 @@ const LeagueDisplay = () => {
         (player) => player.playerId !== playerInfo.playerId
       );
       setSelectedAwayTeam(awayTeamPlayersTemp);
-      setNewHomeAverage(getTeamAverage(selectedHomeTeam));
-      setNewAwayAverage(getTeamAverage(selectedAwayTeam));
+      if (selectedHomeTeam) setNewHomeAverage(getTeamAverage(selectedHomeTeam));
+      if (selectedAwayTeam) setNewAwayAverage(getTeamAverage(selectedAwayTeam));
     }
   }
 

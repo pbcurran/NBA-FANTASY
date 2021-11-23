@@ -1,7 +1,6 @@
 import React from 'react';
-import { Col, Row, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
-import './TeamList.module.css';
 import styles from './TeamList.module.css';
 
 const TeamList = ({
