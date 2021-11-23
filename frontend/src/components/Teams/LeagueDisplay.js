@@ -31,7 +31,9 @@ const LeagueDisplay = () => {
   useEffect(() => {
     const getTeams = async () => {
       let playersTemp = [];
-      const result = await axios.get('http://127.0.0.1:8000/api/leagueteams/');
+      const result = await axios.get(
+        'quest-for-the-belt.herokuapp.com/api/leagueteams/'
+      );
       console.log('api results: ', result.data);
 
       // creates a list of all the players for getting any player data needed to display

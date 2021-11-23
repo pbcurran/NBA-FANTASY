@@ -5,7 +5,6 @@ from rest_framework.response import Response
 
 from espn_api.basketball import League
 
-from .products import products
 
 # info for api calls etc
 # https://github.com/cwendt94/espn-api/wiki/Basketball-Intro
