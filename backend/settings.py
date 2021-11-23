@@ -23,7 +23,7 @@ import os
 SECRET_KEY = 'django-insecure-uio@l20g7m*7(m-@t#6#a8rdh$u#s*h+^f(zex+me%sj8h#!gp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'quest-for-the-belt.herokuapp.com']
 
@@ -143,5 +143,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-if os.getcwd() == '/app':
-    DEBUG = False
+# if os.getcwd() == '/app':
+#     DEBUG = False
