@@ -1,6 +1,13 @@
 ###### INSTRUCTIONS FOR STARTING THE SERVER
+
 # in NBA_FANTASY
+
     # Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
     # myenv\scripts\activate
-# in ./backend 
+
+# in ./backend
+
     # python manage.py runserver
+
+    # heroku run python manage.py migrate -a quest-for-the-belt
+    # heroku run python manage.py runserver -a quest-for-the-belt
